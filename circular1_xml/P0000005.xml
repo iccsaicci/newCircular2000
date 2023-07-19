@@ -30,8 +30,8 @@
             <I PROPERTY="AdvectionForm" VALUE="Convective" />
             <I PROPERTY="Projection" VALUE="Galerkin" />
             <I PROPERTY="TimeIntegrationMethod" VALUE="IMEXOrder2" />
-            <!--I PROPERTY="GJPStabilisation" VALUE="SemiImplicit"/-->
-            <I PROPERTY="SpectralVanishingViscosity" VALUE="DGKernel" />
+            <I PROPERTY="GJPStabilisation" VALUE="SemiImplicit" />
+            <!--I PROPERTY="SpectralVanishingViscosity" VALUE="DGKernel" /-->
         </SOLVERINFO>
         <GLOBALSYSSOLNINFO>
             <V VAR="u,v,w">
@@ -50,7 +50,7 @@
         <PARAMETERS>
             <P>TimeStep = 1.0e-3</P>
             <!-- Time step -->
-            <P>NumSteps = 10000</P>
+            <P>NumSteps = 5000</P>
             <!-- Number of step -->
             <P>IO_CheckSteps = 1000</P>
             <!-- Number of step to write the intermediate results -->
@@ -97,7 +97,7 @@
         </BOUNDARYCONDITIONS>
         <!-- Specify the initial condition -->
         <FUNCTION NAME="InitialConditions">
-            <F VAR="u,v,w,p" FILE="circular1_6.rst" />
+            <F VAR="u,v,w,p" FILE="circular1_21.rst" />
         </FUNCTION>
     </CONDITIONS>
     <COLLECTIONS>
@@ -133,8 +133,8 @@
         <NekMeshCommandLine>circular1.msh circular1.xml</NekMeshCommandLine>
     </Metadata>
     <EXPANSIONS>
-        <E COMPOSITE="C[200,201]" NUMMODES="4" TYPE="MODIFIED" FIELDS="u,v,w" />
-        <E COMPOSITE="C[200,201]" NUMMODES="3" TYPE="MODIFIEDQUADPLUS1" FIELDS="p" />
+        <E COMPOSITE="C[200,201]" NUMMODES="5" TYPE="MODIFIED" FIELDS="u,v,w" />
+        <E COMPOSITE="C[200,201]" NUMMODES="4" TYPE="MODIFIEDQUADPLUS1" FIELDS="p" />
     </EXPANSIONS>
     <FILTERS>
         <FILTER TYPE="HistoryPoints">
