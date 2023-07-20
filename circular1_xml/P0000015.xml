@@ -97,7 +97,7 @@
         </BOUNDARYCONDITIONS>
         <!-- Specify the initial condition -->
         <FUNCTION NAME="InitialConditions">
-            <F VAR="u,v,w,p" FILE="circular1_21.rst" />
+            <F VAR="u,v,w,p" FILE="circular1_24.rst" />
         </FUNCTION>
     </CONDITIONS>
     <COLLECTIONS>
